@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI Match-3 | Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="floaters" id="floaters"></div>
+
+<main class="auth-wrap">
+
+    <section id="authCard" class="card auth">
+
+        <div class="auth-logo">
+            <div class="brand-mark">A3</div>
+            <h1>AI MATCH-3</h1>
+            <span>Intelligent Adaptive Puzzle System</span>
+        </div>
+
+        <div class="tabs">
+            <div class="tab-slider" id="tabSlider"></div>
+            <button class="tab active" data-mode="login" type="button">Login</button>
+            <button class="tab" data-mode="register" type="button">Register</button>
+        </div>
+
+        <form class="auth-form" id="authForm" autocomplete="on">
+
+            <div class="field">
+                <label for="username">Username</label>
+                <input id="username" name="username" type="text" placeholder="e.g. player_one" autocomplete="username" required>
+            </div>
+
+            <div class="field">
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" placeholder="Enter password" autocomplete="current-password" required>
+                <span class="field-icon" id="togglePw">show</span>
+                <div class="strength-meter" id="strengthMeter" style="display:none;">
+                    <i></i><i></i><i></i><i></i>
+                </div>
+            </div>
+
+            <button id="authBtn" type="submit" class="btn-primary auth-submit">
+                <span class="label">Login</span>
+                <span class="spinner"></span>
+            </button>
+
+            <p id="authMsg"></p>
+
+        </form>
+
+        <div class="auth-footnote">
+            Adaptive difficulty &middot; AI hints &middot; Explainable analytics<br>
+            Your session is stored securely for this browser only.
+        </div>
+
+    </section>
+
+</main>
+
+<script src="{{ url_for('static', filename='js/common.js') }}"></script>
+<script src="{{ url_for('static', filename='js/auth.js') }}"></script>
+</body>
+</html>

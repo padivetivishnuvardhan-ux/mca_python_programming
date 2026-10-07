@@ -1,0 +1,8 @@
+Flask>=3.0
+Flask-CORS>=4.0
+numpy>=1.26
+pandas>=2.2
+scikit-learn>=1.5
+joblib>=1.4
+shap>=0.45
+matplotlib>=3.9
